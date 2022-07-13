@@ -1,4 +1,4 @@
-### Obtaining global Intensity-Duration-Frequency curves using the map_blocks function in xarray
+### Obtaining global Intensity-Duration-Frequency curves for rainfall using map_blocks() in xarray
 ----
 
 This notebook shows how to leverage the powerful [map_blocks](https://docs.xarray.dev/en/stable/generated/xarray.map_blocks.html) function in [Xarray](https://docs.xarray.dev/en/stable/index.html) to calculate the Intensity-Duration-Frequency curves (IDF) for precipitation, by parallelizing calculations on a global [**CAM-SE**](https://journals.sagepub.com/doi/10.1177/1094342011428142) dataset with an unstructured grid. The IDF curves plot the precipitation intensity (mm/hr) as a function of the duration for different return periods and are a critical tool in developing strategies for climate resilience. The present exercise is inspired by this set of [videos](https://www.youtube.com/watch?v=FItPMwK4K1o) showing how to compute the IDF curves at a single location by fitting Generalized Extreme Value distributions using numpy and scipy, but operates within an `Xarray` framework. The primary contribution of this notebook is the use of `map_blocks`.
